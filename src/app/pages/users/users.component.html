@@ -1,0 +1,35 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Book seats</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="seat-lists">
+
+   <div class="theatre-container">
+      <div class="screen">
+         <div class="screen-line"></div>
+         <div class="screen-text">
+            <h4>Screen this way</h4>
+         </div>
+      </div>
+   
+      <table class="table table-bordered">
+         @for (row of numberOfRows; track row) {
+            <tr>
+               @for (col of numberOfColumns; track col) {
+                  @if(row !== 3 && row !== 8){
+                     <td>
+                        <mat-checkbox class="seat-checkbox" (change)="onCheckboxChange(row, col)" > </mat-checkbox>
+                     </td>
+                  }@else{
+                     <td>
+                        <div style="height: 20px;"></div>
+                     </td>
+                  }
+               }
+            </tr>
+         }
+      </table>
+   </div>
+
+  </mat-card-content>
+</mat-card>

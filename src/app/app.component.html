@@ -1,0 +1,25 @@
+<mat-drawer-container class="example-container" autosize>
+   <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+      <p class="app-name">{{title}}</p>
+
+      <mat-nav-list>
+         <a mat-list-item routerLink="/users" routerLinkActive="active-link">
+            <div class="navicon">
+               <mat-icon class="white menu-icon" aria-label="Users icon">people</mat-icon>
+               <span class="white">users</span>
+            </div>
+         </a>
+      </mat-nav-list>
+         
+   </mat-drawer>
+
+   <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+         <mat-icon class="menu-icon" aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+   </div>
+
+   <div class="body-content">
+      <router-outlet></router-outlet>
+   </div>
+</mat-drawer-container>

@@ -1,0 +1,41 @@
+.example-container{
+   height: 100vh;
+
+   .example-sidenav-content{
+      padding: 10px;
+      background-color: #052e52;
+      .menu-icon{
+         color: white;
+         font-size: 20px;
+         margin-right: 10px;
+      }
+   }
+
+   .example-sidenav{
+      background-color: #114878;
+      max-width: 200px;
+      color: white;
+      border-top-right-radius: 0;
+   }
+   
+   .body-content{
+      background-color: #f5f5f5;
+      padding: 20px;
+   }
+
+   .white{
+      color: white;
+   }
+
+   .app-name{
+      // background: #052e52;
+      text-align: center;  
+   }
+
+   .navicon{
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+   }
+}
